@@ -20,7 +20,6 @@
 # Arquivos de banco de dados
 *.db
 *.sqlite
-*.sql
 *.frm
 *.myd
 *.myi
