@@ -30,7 +30,35 @@ IGNORE 1 ROWS
 SET data = STR_TO_DATE(@data, '%d/%m/%Y');
 
 -- Repetir para os outros arquivos (2024-09-03, 2024-12-10, 2025-03-18)
--- 
+-- Arquivo 2024-09-03
+LOAD DATA LOCAL INFILE 'C:\Users\User\Desktop\ans-banco\data\demonstracoes_contabeis\2024/2024-09-03.csv'
+INTO TABLE demonstracoes_contabeis
+FIELDS TERMINATED BY ';'
+ENCLOSED BY '"'
+LINES TERMINATED BY '\r\n'
+IGNORE 1 ROWS
+(@data, reg_ans, cd_conta_contabil, descricao, vl_saldo_inicial, vl_saldo_final)
+SET data = STR_TO_DATE(@data, '%d/%m/%Y');
+
+-- Arquivo 2024-12-10
+LOAD DATA LOCAL INFILE 'C:\Users\User\Desktop\ans-banco\data\demonstracoes_contabeis\2024/2024-12-10.csv'
+INTO TABLE demonstracoes_contabeis
+FIELDS TERMINATED BY ';'
+ENCLOSED BY '"'
+LINES TERMINATED BY '\r\n'
+IGNORE 1 ROWS
+(@data, reg_ans, cd_conta_contabil, descricao, vl_saldo_inicial, vl_saldo_final)
+SET data = STR_TO_DATE(@data, '%d/%m/%Y');
+
+-- Arquivo 2025-03-18
+LOAD DATA LOCAL INFILE 'C:\Users\User\Desktop\ans-banco\data\demonstracoes_contabeis\2024/2025-03-18.csv'
+INTO TABLE demonstracoes_contabeis
+FIELDS TERMINATED BY ';'
+ENCLOSED BY '"'
+LINES TERMINATED BY '\r\n'
+IGNORE 1 ROWS
+(@data, reg_ans, cd_conta_contabil, descricao, vl_saldo_inicial, vl_saldo_final)
+SET data = STR_TO_DATE(@data, '%d/%m/%Y');
 
 -- Restaurar configurações
 SET FOREIGN_KEY_CHECKS = 1;
